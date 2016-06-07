@@ -5,6 +5,7 @@ public class Rotate : MonoBehaviour {
     
 	public void RotatePenny () {
         transform.Rotate(new Vector3(90f,0f,0f));
+        GetComponent<Penny>().rotated = !GetComponent<Penny>().rotated;
 	}
 	
 }
