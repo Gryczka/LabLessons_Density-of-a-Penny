@@ -13,11 +13,11 @@ public class measurementTrigger : MonoBehaviour {
         //On Trigger set the penny measurement in the side panel to whatever the penny's value is.
         if (other.GetComponent<Penny>().rotated)
         {
-            var.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().diameter.ToString(), " cm");
+            var.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().diameter.ToString());
             varIsSet = true;
         }
         else {
-            var2.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().width.ToString(), " cm");
+            var2.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().width.ToString());
             var2IsSet = true;
         }
     }
@@ -26,7 +26,7 @@ public class measurementTrigger : MonoBehaviour {
         if(varIsSet && var2IsSet)
         {
             //Placeholder, need to get values from penny
-            var3.GetComponent<Text>().text = string.Concat(3.4f.ToString(), " cm\u00B3");
+            var3.GetComponent<Text>().text = (Mathf.PI * Mathf.Pow((float.Parse(var.text) / 2), 2) * float.Parse(var2.text)).ToString("0.00");
         }
     }
 }

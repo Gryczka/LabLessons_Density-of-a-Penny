@@ -8,6 +8,6 @@ public class volumeTrigger : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //On Trigger set the penny volume in the side panel to whatever the penny's value is.
-            var.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().volume.ToString(), " cm\u00B3");
+            var.GetComponent<Text>().text = string.Concat(other.GetComponent<Penny>().volume.ToString());
     }
 }
