@@ -8,12 +8,7 @@ public class volumeCalculator : MonoBehaviour {
     public Text volumeVar2;
     public Text densityVar1;
     public Text densityVar2;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (massVar.text != "")
         {
@@ -22,6 +17,7 @@ public class volumeCalculator : MonoBehaviour {
             float vol2;
             float dens1;
             float dens2;
+            
             if (volumeVar1.text != "")
             {
                 vol1 = float.Parse(volumeVar1.text);
@@ -35,7 +31,6 @@ public class volumeCalculator : MonoBehaviour {
                 dens2 = mass / vol2;
                 densityVar2.text = dens2.ToString("0.00");
             }
-
         }
 	}
 }
